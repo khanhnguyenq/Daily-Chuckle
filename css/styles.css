@@ -17,3 +17,17 @@
 .font-x-large {
   font-size: x-large;
 }
+
+.h-20 {
+  height: 20px;
+}
+
+.background-yellow {
+  background-color: #f3f3dd;
+}
+
+.category,
+.saved {
+  background-color: #f3f3dd;
+  border: 0;
+}

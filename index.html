@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/chuck-norris" />
+    <script
+      src="https://kit.fontawesome.com/16ca3fd171.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="background-brown">
@@ -41,7 +44,19 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main class="background-yellow">
+      <div class="container navbar">
+        <nav class="row h-20 space-between center-cross">
+          <i class="fa-solid fa-bars"></i>
+          <button class="category">all categories</button>
+          <button class="saved">saved jokes</button>
+          <i class="fa-solid fa-x"></i>
+        </nav>
+      </div>
+      <div class="container">
+        <p>choose a category or take your chance with a random</p>
+      </div>
+    </main>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
   </body>

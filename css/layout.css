@@ -3,6 +3,7 @@
 }
 
 .container {
+  min-width: 330px;
   max-width: 400px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -69,6 +70,10 @@ img {
 
 .padding-right-0 {
   margin-right: 0;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
