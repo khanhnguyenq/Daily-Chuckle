@@ -1,0 +1,19 @@
+* {
+  font-family: 'Chuck Norris', sans-serif;
+}
+
+.background-brown {
+  background-color: #6e0d24;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.font-medium {
+  font-size: medium;
+}
+
+.font-x-large {
+  font-size: x-large;
+}
