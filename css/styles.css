@@ -84,6 +84,7 @@
   border: transparent;
   border-radius: 5px;
   font-size: xx-small;
+  transition: 0.25s ease;
 }
 
 .bgc-1 {
@@ -124,4 +125,19 @@
 
 .bgc-10 {
   background-color: #97849d;
+}
+
+button:hover,
+i:hover {
+  cursor: pointer;
+}
+
+p {
+  cursor: default;
+}
+
+.btn-w-h:hover {
+  width: 80px;
+  height: 80px;
+  font-size: small;
 }
