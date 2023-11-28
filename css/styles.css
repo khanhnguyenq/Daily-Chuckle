@@ -1,0 +1,132 @@
+* {
+  font-family: 'Chuck Norris', sans-serif;
+  letter-spacing: 1px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-all {
+  justify-content: center;
+  align-content: center;
+}
+
+.center-main {
+  justify-content: center;
+}
+
+.center-cross {
+  align-content: center;
+}
+
+.column-third {
+  flex-basis: calc(40%);
+}
+
+.padding-7 {
+  padding: 7px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.background-brown {
+  background-color: #6e0d24;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.font-medium {
+  font-size: medium;
+}
+
+.font-x-large {
+  font-size: x-large;
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.background-yellow {
+  background-color: #f3f3dd;
+}
+
+.all-category,
+.saved {
+  background-color: #f3f3dd;
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-w-h {
+  width: 70px;
+  height: 70px;
+  border: transparent;
+  border-radius: 5px;
+  font-size: xx-small;
+  transition: 0.25s ease;
+}
+
+.bgc-1 {
+  background-color: #97849d;
+}
+
+.bgc-2 {
+  background-color: #653420;
+}
+
+.bgc-3 {
+  background-color: #757369;
+}
+
+.bgc-4 {
+  background-color: #93757a;
+}
+
+.bgc-5 {
+  background-color: #6d76cc;
+}
+
+.bgc-6 {
+  background-color: #293340;
+}
+
+.bgc-7 {
+  background-color: #85626b;
+}
+
+.bgc-8 {
+  background-color: #757369;
+}
+
+.bgc-9 {
+  background-color: #653420;
+}
+
+.bgc-10 {
+  background-color: #97849d;
+}
+
+button:hover,
+i:hover {
+  cursor: pointer;
+}
+
+p {
+  cursor: default;
+}
+
+.btn-w-h:hover {
+  width: 80px;
+  height: 80px;
+  font-size: small;
+}
