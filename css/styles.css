@@ -26,8 +26,64 @@
   background-color: #f3f3dd;
 }
 
-.category,
+.all-category,
 .saved {
   background-color: #f3f3dd;
   border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h-60 {
+  height: 60vh;
+}
+
+.btn-w-h {
+  width: 70px;
+  height: 70px;
+  border: transparent;
+  border-radius: 5px;
+  font-size: xx-small;
+}
+
+.bgc-1 {
+  background-color: #97849d;
+}
+
+.bgc-2 {
+  background-color: #653420;
+}
+
+.bgc-3 {
+  background-color: #757369;
+}
+
+.bgc-4 {
+  background-color: #93757a;
+}
+
+.bgc-5 {
+  background-color: #6d76cc;
+}
+
+.bgc-6 {
+  background-color: #293340;
+}
+
+.bgc-7 {
+  background-color: #85626b;
+}
+
+.bgc-8 {
+  background-color: #757369;
+}
+
+.bgc-9 {
+  background-color: #653420;
+}
+
+.bgc-10 {
+  background-color: #97849d;
 }

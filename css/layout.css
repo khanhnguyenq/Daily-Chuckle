@@ -13,7 +13,7 @@ img {
   width: 90%;
 }
 
-.row {
+.flex {
   display: flex;
   flex-wrap: wrap;
 }
@@ -76,6 +76,14 @@ img {
   justify-content: space-between;
 }
 
+.category {
+  flex-basis: 50%;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 800px;
@@ -108,5 +116,9 @@ img {
   .padding-left-140,
   .padding-left-75 {
     padding: 0;
+  }
+
+  .category {
+    flex-basis: 20%;
   }
 }

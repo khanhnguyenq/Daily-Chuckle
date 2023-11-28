@@ -13,29 +13,29 @@
       src="https://kit.fontawesome.com/16ca3fd171.js"
       crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="background-yellow">
     <header class="background-brown">
       <div class="container">
-        <div class="row">
-          <div class="column-three-quarter row">
+        <div class="flex">
+          <div class="column-three-quarter flex">
             <div class="inline">
               <p class="margin-btm white-text font-medium">
                 your daily dose of
               </p>
             </div>
-            <div class="row inline">
+            <div class="flex inline">
               <p
                 class="margin-top-btm-0 white-text font-x-large padding-left-75">
                 chuck norris
               </p>
             </div>
-            <div class="row inline">
+            <div class="flex inline">
               <p class="margin-top white-text font-medium padding-left-140">
                 joke
               </p>
             </div>
           </div>
-          <div class="row column-one-quarter center-cross">
+          <div class="flex column-one-quarter center-cross">
             <img
               class="padding-7"
               src="images/download.webp"
@@ -44,17 +44,53 @@
         </div>
       </div>
     </header>
-    <main class="background-yellow">
-      <div class="container navbar">
-        <nav class="row h-20 space-between center-cross">
-          <i class="fa-solid fa-bars"></i>
-          <button class="category">all categories</button>
-          <button class="saved">saved jokes</button>
-          <i class="fa-solid fa-x"></i>
-        </nav>
-      </div>
+    <main>
       <div class="container">
-        <p>choose a category or take your chance with a random</p>
+        <div class="navbar">
+          <nav class="flex h-20 space-between center-cross">
+            <i class="fa-solid fa-bars"></i>
+            <button class="all-category">all categories</button>
+            <button class="saved">saved jokes</button>
+            <i class="fa-solid fa-x"></i>
+          </nav>
+        </div>
+        <div class="flex center-all">
+          <p class="text-center">
+            choose a category or take your chance with a random
+          </p>
+        </div>
+        <div class="flex h-60">
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-1 white-text">animal</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-2 white-text">career</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-3 white-text">dev</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-4 white-text">fashion</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-5 white-text">history</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-6 white-text">money</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-7 white-text">music</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-8 white-text">political</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-9 white-text">science</button>
+          </div>
+          <div class="category flex center-all">
+            <button class="btn-w-h bgc-10 white-text">random</button>
+          </div>
+        </div>
       </div>
     </main>
     <script src="js/data.js"></script>
