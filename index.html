@@ -18,10 +18,16 @@
       <div class="container">
         <div class="flex">
           <div class="column-three-quarter flex">
-            <div class="inline">
+            <div class="daily-header inline hidden">
               <p class="margin-btm white-text font-medium">
                 your daily dose of
               </p>
+            </div>
+            <div class="requested-header inline">
+              <p class="margin-btm white-text font-medium">your requested</p>
+            </div>
+            <div class="saved-header inline hidden">
+              <p class="margin-btm white-text font-medium">your saved</p>
             </div>
             <div class="flex inline">
               <p
@@ -58,43 +64,46 @@
             </div>
           </nav>
         </div>
-        <div class="flex center-all">
-          <p class="text-center">
-            choose a category or take your chance with a random
-          </p>
+        <div data-view="landing">
+          <div class="flex center-all">
+            <p class="text-center">
+              choose a category or take your chance with a random
+            </p>
+          </div>
+          <div class="flex h-category">
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-1 white-text">animal</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-2 white-text">career</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-3 white-text">dev</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-4 white-text">fashion</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-5 white-text">history</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-6 white-text">money</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-7 white-text">music</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-8 white-text">political</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-9 white-text">science</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-10 white-text">random</button>
+            </div>
+          </div>
         </div>
-        <div class="flex h-category">
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-1 white-text">animal</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-2 white-text">career</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-3 white-text">dev</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-4 white-text">fashion</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-5 white-text">history</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-6 white-text">money</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-7 white-text">music</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-8 white-text">political</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-9 white-text">science</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-10 white-text">random</button>
-          </div>
-        </div>
+        <div data-view="joke"></div>
       </div>
     </main>
     <script src="js/data.js"></script>

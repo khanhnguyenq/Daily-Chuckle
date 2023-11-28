@@ -63,3 +63,23 @@ $categoryContainer.addEventListener('click', function (event) {
     xhr.send();
   }
 });
+
+const $requestedHeader = document.querySelector('.requested-header');
+const $savedHeader = document.querySelector('.saved-header');
+const $dailyHeader = document.querySelector('.daily-header');
+
+function viewSwap(view) {
+  if (view === 'landing') {
+    $dailyHeader.classList.remove('hidden');
+    $savedHeader.classList.add('hidden');
+    $requestedHeader.classList.add('hidden');
+  } else if (view === 'joke') {
+    $dailyHeader.classList.add('hidden');
+    $savedHeader.classList.add('hidden');
+    $requestedHeader.classList.remove('hidden');
+  } else if (view === 'saved') {
+    $dailyHeader.classList.add('hidden');
+    $savedHeader.classList.remove('hidden');
+    $requestedHeader.classList.add('hidden');
+  }
+}
