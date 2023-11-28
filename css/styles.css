@@ -1,5 +1,6 @@
 * {
   font-family: 'Chuck Norris', sans-serif;
+  letter-spacing: 1px;
 }
 
 .flex {
@@ -20,10 +21,6 @@
   align-content: center;
 }
 
-.right {
-  justify-content: flex-end;
-}
-
 .column-third {
   flex-basis: calc(40%);
 }
@@ -32,16 +29,8 @@
   padding: 7px;
 }
 
-.padding-right-0 {
-  margin-right: 0;
-}
-
 .space-between {
   justify-content: space-between;
-}
-
-.margin-5 {
-  margin: 5px;
 }
 
 .background-brown {
