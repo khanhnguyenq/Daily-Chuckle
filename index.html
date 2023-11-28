@@ -49,9 +49,13 @@
         <div class="navbar">
           <nav class="flex h-20 space-between center-cross">
             <i class="fa-solid fa-bars"></i>
-            <button class="all-category">all categories</button>
-            <button class="saved">saved jokes</button>
-            <i class="fa-solid fa-x"></i>
+            <i class="fa-solid fa-x hidden"></i>
+            <div class="column-third">
+              <button class="all-category hidden">all categories</button>
+            </div>
+            <div class="column-third">
+              <button class="saved hidden">saved jokes</button>
+            </div>
           </nav>
         </div>
         <div class="flex center-all">
@@ -59,7 +63,7 @@
             choose a category or take your chance with a random
           </p>
         </div>
-        <div class="flex h-60">
+        <div class="flex h-category">
           <div class="category flex center-all">
             <button class="btn-w-h bgc-1 white-text">animal</button>
           </div>

@@ -2,6 +2,48 @@
   font-family: 'Chuck Norris', sans-serif;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-all {
+  justify-content: center;
+  align-content: center;
+}
+
+.center-main {
+  justify-content: center;
+}
+
+.center-cross {
+  align-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.column-third {
+  flex-basis: calc(40%);
+}
+
+.padding-7 {
+  padding: 7px;
+}
+
+.padding-right-0 {
+  margin-right: 0;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
 .background-brown {
   background-color: #6e0d24;
 }
@@ -34,10 +76,6 @@
 
 .text-center {
   text-align: center;
-}
-
-.h-60 {
-  height: 60vh;
 }
 
 .btn-w-h {
