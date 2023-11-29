@@ -5,6 +5,7 @@ const $allCategoryBtn = document.querySelector('.all-category');
 const $savedBtn = document.querySelector('.saved-btn');
 const $barsBtn = document.querySelector('.fa-bars');
 const $xBtn = document.querySelector('.fa-x');
+const $homeBtn = document.querySelector('.home');
 
 $navBar.addEventListener('click', function (event) {
   if (
@@ -46,6 +47,7 @@ $categoryContainer.addEventListener('click', function (event) {
       generatedJoke.entryId = data.nextEntryId;
       data.joke.unshift(generatedJoke);
       data.nextEntryId++;
+      $jokeArea.appendChild(renderOneJoke(data.joke[0]));
     });
     xhr.send();
   } else {
@@ -59,9 +61,11 @@ $categoryContainer.addEventListener('click', function (event) {
       generatedJoke.entryId = data.nextEntryId;
       data.joke.unshift(generatedJoke);
       data.nextEntryId++;
+      $jokeArea.appendChild(renderOneJoke(data.joke[0]));
     });
     xhr.send();
   }
+  viewSwap('joke');
 });
 
 const $jokeHeader = document.querySelector('.joke-header');
@@ -111,3 +115,31 @@ function viewSwap(view) {
     $jokePage.classList.add('hidden');
   }
 }
+
+const $jokeArea = document.querySelector('.joke-container');
+const $jokeView = document.querySelector('[data-view="joke"]');
+const $savedView = document.querySelector('[data-view="saved"]');
+const $savedJokeArea = document.querySelector('ul');
+
+function renderOneJoke(joke) {
+  const $jokeP = document.createElement('p');
+  $jokeP.setAttribute('class', 'flex center-all text-center font-small');
+  $jokeP.textContent = joke.value;
+
+  return $jokeP;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  for (let i = 0; i < data.joke.length; i++) {
+    $savedJokeArea.appendChild(renderOneJoke(data.joke[i]));
+  }
+});
+
+$savedBtn.addEventListener('click', function () {
+  viewSwap('saved');
+});
+
+$homeBtn.addEventListener('click', function () {
+  location.reload();
+  viewSwap('landing');
+});

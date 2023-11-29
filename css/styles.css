@@ -58,7 +58,7 @@
 }
 
 .all-category,
-.saved,
+.saved-btn,
 .home,
 .another {
   background-color: #f3f3dd;
@@ -134,7 +134,7 @@ p {
 }
 
 .joke-container {
-  border: solid 2px #000;
+  border: transparent;
   border-radius: 10px;
   height: 300px;
   margin-top: 50px;
