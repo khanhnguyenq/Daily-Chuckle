@@ -91,6 +91,8 @@ function viewSwap(view) {
     $jokeHeader.classList.add('hidden');
     $jokeNav.classList.add('hidden');
     $jokePage.classList.add('hidden');
+
+    data.view = 'landing';
   } else if (view === 'joke') {
     $landingHeader.classList.add('hidden');
     $landingNav.classList.add('hidden');
@@ -102,6 +104,8 @@ function viewSwap(view) {
     $jokeHeader.classList.remove('hidden');
     $jokeNav.classList.remove('hidden');
     $jokePage.classList.remove('hidden');
+
+    data.view = 'joke';
   } else if (view === 'saved') {
     $landingHeader.classList.add('hidden');
     $landingNav.classList.add('hidden');
@@ -113,6 +117,8 @@ function viewSwap(view) {
 
     $jokeHeader.classList.add('hidden');
     $jokePage.classList.add('hidden');
+
+    data.view = 'saved';
   }
 }
 
