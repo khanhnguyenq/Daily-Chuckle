@@ -1,8 +1,8 @@
 /* global data */
 
-const $navBar = document.querySelector('.navbar');
+const $navBar = document.querySelector('.landing-navbar');
 const $allCategoryBtn = document.querySelector('.all-category');
-const $savedBtn = document.querySelector('.saved');
+const $savedBtn = document.querySelector('.saved-btn');
 const $barsBtn = document.querySelector('.fa-bars');
 const $xBtn = document.querySelector('.fa-x');
 
@@ -64,22 +64,50 @@ $categoryContainer.addEventListener('click', function (event) {
   }
 });
 
-const $requestedHeader = document.querySelector('.requested-header');
+const $jokeHeader = document.querySelector('.joke-header');
+const $jokeNav = document.querySelector('.joke-navbar');
+const $jokePage = document.querySelector('.joke');
+
 const $savedHeader = document.querySelector('.saved-header');
-const $dailyHeader = document.querySelector('.daily-header');
+const $savedPage = document.querySelector('.saved');
+
+const $landingHeader = document.querySelector('.landing-header');
+const $landingNav = document.querySelector('.landing-navbar');
+const $landingPage = document.querySelector('.landing');
 
 function viewSwap(view) {
   if (view === 'landing') {
-    $dailyHeader.classList.remove('hidden');
+    $landingHeader.classList.remove('hidden');
+    $landingNav.classList.remove('hidden');
+    $landingPage.classList.remove('hidden');
+
     $savedHeader.classList.add('hidden');
-    $requestedHeader.classList.add('hidden');
+    $savedPage.classList.add('hidden');
+
+    $jokeHeader.classList.add('hidden');
+    $jokeNav.classList.add('hidden');
+    $jokePage.classList.add('hidden');
   } else if (view === 'joke') {
-    $dailyHeader.classList.add('hidden');
+    $landingHeader.classList.add('hidden');
+    $landingNav.classList.add('hidden');
+    $landingPage.classList.add('hidden');
+
     $savedHeader.classList.add('hidden');
-    $requestedHeader.classList.remove('hidden');
+    $savedPage.classList.add('hidden');
+
+    $jokeHeader.classList.remove('hidden');
+    $jokeNav.classList.remove('hidden');
+    $jokePage.classList.remove('hidden');
   } else if (view === 'saved') {
-    $dailyHeader.classList.add('hidden');
+    $landingHeader.classList.add('hidden');
+    $landingNav.classList.add('hidden');
+    $landingPage.classList.add('hidden');
+
     $savedHeader.classList.remove('hidden');
-    $requestedHeader.classList.add('hidden');
+    $jokeNav.classList.remove('hidden');
+    $savedPage.classList.remove('hidden');
+
+    $jokeHeader.classList.add('hidden');
+    $jokePage.classList.add('hidden');
   }
 }

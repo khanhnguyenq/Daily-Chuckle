@@ -18,12 +18,12 @@
       <div class="container">
         <div class="flex">
           <div class="column-three-quarter flex">
-            <div class="daily-header inline hidden">
+            <div class="landing-header inline">
               <p class="margin-btm white-text font-medium">
                 your daily dose of
               </p>
             </div>
-            <div class="requested-header inline">
+            <div class="joke-header inline hidden">
               <p class="margin-btm white-text font-medium">your requested</p>
             </div>
             <div class="saved-header inline hidden">
@@ -52,19 +52,25 @@
     </header>
     <main>
       <div class="container">
-        <div class="navbar">
-          <nav class="flex h-20 space-between center-cross">
+        <div class="landing-navbar">
+          <div class="flex h-20 space-between center-cross">
             <i class="fa-solid fa-bars"></i>
             <i class="fa-solid fa-x hidden"></i>
             <div class="column-third">
-              <button class="all-category hidden">all categories</button>
+              <button class="all-category hidden">all&nbsp;categories</button>
             </div>
             <div class="column-third">
-              <button class="saved hidden">saved jokes</button>
+              <button class="saved-btn hidden">saved&nbsp;jokes</button>
             </div>
-          </nav>
+          </div>
         </div>
-        <div data-view="landing">
+        <div class="joke-navbar hidden">
+          <div class="flex h-20 center-cross">
+            <i class="fa-solid fa-chevron-left font-small"></i>
+            <button class="home margin-top-btm-0">home&nbsp;page</button>
+          </div>
+        </div>
+        <div data-view="landing" class="landing">
           <div class="flex center-all">
             <p class="text-center">
               choose a category or take your chance with a random
@@ -103,7 +109,26 @@
             </div>
           </div>
         </div>
-        <div data-view="joke"></div>
+        <div data-view="joke" class="joke hidden">
+          <div class="joke-container flex center-all">
+            <p>example joke</p>
+          </div>
+          <div class="another flex center-main margin-top-30">
+            <button class="another font-small">give me another!</button>
+          </div>
+        </div>
+        <div data-view="saved" class="saved hidden">
+          <div class="flex center-all">
+            <p>saved jokes</p>
+          </div>
+          <div>
+            <ul>
+              <li>saved joke 1</li>
+              <li>saved joke 2</li>
+              <li>saved joke 3</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
     <script src="js/data.js"></script>
