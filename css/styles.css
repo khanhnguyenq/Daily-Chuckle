@@ -58,7 +58,9 @@
 }
 
 .all-category,
-.saved {
+.saved-btn,
+.home,
+.another {
   background-color: #f3f3dd;
   border: 0;
 }
@@ -129,4 +131,25 @@ p {
   width: 80px;
   height: 80px;
   font-size: small;
+}
+
+.joke-container {
+  border: transparent;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.font-x-small {
+  font-size: x-small;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

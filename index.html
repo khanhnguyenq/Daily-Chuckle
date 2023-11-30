@@ -18,10 +18,16 @@
       <div class="container">
         <div class="flex">
           <div class="column-three-quarter flex">
-            <div class="inline">
+            <div class="landing-header inline">
               <p class="margin-btm white-text font-medium">
                 your daily dose of
               </p>
+            </div>
+            <div class="joke-header inline hidden">
+              <p class="margin-btm white-text font-medium">your requested</p>
+            </div>
+            <div class="saved-header inline hidden">
+              <p class="margin-btm white-text font-medium">your saved</p>
             </div>
             <div class="flex inline">
               <p
@@ -46,53 +52,75 @@
     </header>
     <main>
       <div class="container">
-        <div class="navbar">
-          <nav class="flex h-20 space-between center-cross">
+        <div class="landing-navbar">
+          <div class="flex h-20 space-between center-cross">
             <i class="fa-solid fa-bars"></i>
             <i class="fa-solid fa-x hidden"></i>
             <div class="column-third">
-              <button class="all-category hidden">all categories</button>
+              <button class="all-category hidden">all&nbsp;categories</button>
             </div>
             <div class="column-third">
-              <button class="saved hidden">saved jokes</button>
+              <button class="saved-btn hidden">saved&nbsp;jokes</button>
             </div>
-          </nav>
+          </div>
         </div>
-        <div class="flex center-all">
-          <p class="text-center">
-            choose a category or take your chance with a random
-          </p>
+        <div class="joke-navbar hidden">
+          <div class="flex h-20 center-cross">
+            <i class="fa-solid fa-chevron-left font-small"></i>
+            <button class="home margin-top-btm-0">home&nbsp;page</button>
+          </div>
         </div>
-        <div class="flex h-category">
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-1 white-text">animal</button>
+        <div data-view="landing" class="landing">
+          <div class="flex center-all">
+            <p class="text-center">
+              choose a category or take your chance with a random
+            </p>
           </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-2 white-text">career</button>
+          <div class="flex h-category">
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-1 white-text">animal</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-2 white-text">career</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-3 white-text">dev</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-4 white-text">fashion</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-5 white-text">history</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-6 white-text">money</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-7 white-text">music</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-8 white-text">political</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-9 white-text">science</button>
+            </div>
+            <div class="category flex center-all">
+              <button class="btn-w-h bgc-10 white-text">random</button>
+            </div>
           </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-3 white-text">dev</button>
+        </div>
+        <div data-view="joke" class="joke hidden">
+          <div class="joke-container flex center-all"></div>
+          <div class="another flex center-main margin-top-30">
+            <button class="another font-small">give me another!</button>
           </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-4 white-text">fashion</button>
+        </div>
+        <div data-view="saved" class="saved hidden">
+          <div class="joke-area flex center-all">
+            <p>saved jokes</p>
           </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-5 white-text">history</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-6 white-text">money</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-7 white-text">music</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-8 white-text">political</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-9 white-text">science</button>
-          </div>
-          <div class="category flex center-all">
-            <button class="btn-w-h bgc-10 white-text">random</button>
+          <div>
+            <ul></ul>
           </div>
         </div>
       </div>
