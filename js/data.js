@@ -3,6 +3,7 @@
 let data = {
   view: 'landing',
   joke: [],
+  favorited: [],
   editing: null,
   nextEntryId: 1,
 };

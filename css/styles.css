@@ -52,7 +52,7 @@
 .all-category,
 .saved-btn,
 .home,
-.another,
+.another-btn,
 .favorite-btn {
   background-color: #f3f3dd;
   border: 0;
@@ -127,9 +127,7 @@ p {
 }
 
 .joke-container {
-  border: transparent;
-  border-radius: 10px;
-  height: 300px;
+  width: 80%;
   margin-top: 50px;
 }
 
@@ -147,6 +145,10 @@ ul {
   height: 45px;
 }
 
-.underlined {
-  text-decoration: underline;
+.flex-column {
+  flex-direction: column;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }

@@ -163,11 +163,24 @@ const $savedView = document.querySelector('[data-view="saved"]');
 const $savedJokeArea = document.querySelector('.saved-ul');
 
 function renderOneJoke(joke) {
+  const $jokeDiv = document.createElement('div');
   const $jokeP = document.createElement('p');
-  $jokeP.setAttribute('class', 'joke-p flex center-all text-center font-small');
+  const $heart = document.createElement('i');
+
+  $jokeDiv.setAttribute(
+    'class',
+    'margin-bottom-30 joke-p flex center-all text-center flex-column',
+  );
+
+  $jokeP.setAttribute('class', 'font-small');
   $jokeP.textContent = joke.value;
 
-  return $jokeP;
+  $heart.setAttribute('class', 'fa-regular fa-heart');
+
+  $jokeDiv.appendChild($jokeP);
+  $jokeDiv.appendChild($heart);
+
+  return $jokeDiv;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -186,3 +199,48 @@ $homeBtn.addEventListener('click', function () {
   $jokeP.remove();
   viewSwap('landing');
 });
+
+const $anotherBtn = document.querySelector('.another-btn');
+
+$anotherBtn.addEventListener('click', function () {
+  if (text === 'random') {
+    const xhrAnother = new XMLHttpRequest();
+    xhrAnother.open('GET', 'https://api.chucknorris.io/jokes/random');
+    xhrAnother.responseType = 'json';
+    xhrAnother.addEventListener('load', function () {
+      const generatedJoke = {};
+      generatedJoke.categories = xhrAnother.response.categories;
+      generatedJoke.value = xhrAnother.response.value;
+      generatedJoke.entryId = data.nextEntryId;
+      data.joke.unshift(generatedJoke);
+      data.nextEntryId++;
+      const $displayedJoke = document.querySelector('.font-small');
+      $displayedJoke.textContent = data.joke[0].value;
+    });
+    xhrAnother.send();
+  } else {
+    const xhrAnother = new XMLHttpRequest();
+    xhrAnother.open(
+      'GET',
+      'https://api.chucknorris.io/jokes/random?category=' + text,
+    );
+    xhrAnother.responseType = 'json';
+    xhrAnother.addEventListener('load', function () {
+      const generatedJoke = {};
+      generatedJoke.categories = xhrAnother.response.categories;
+      generatedJoke.value = xhrAnother.response.value;
+      generatedJoke.entryId = data.nextEntryId;
+      data.joke.unshift(generatedJoke);
+      data.nextEntryId++;
+      const $displayedJoke = document.querySelector('.font-small');
+      $displayedJoke.textContent = data.joke[0].value;
+    });
+    xhrAnother.send();
+  }
+});
+
+// const $displayedJoke = document.querySelector('.font-small')
+
+// if (data.view = 'saved')
+
+// console.log('$displayedJoke:', $displayedJoke)
