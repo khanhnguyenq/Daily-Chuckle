@@ -6,21 +6,24 @@ const $savedBtn = document.querySelector('.saved-btn');
 const $barsBtn = document.querySelector('.fa-bars');
 const $xBtn = document.querySelector('.fa-x');
 const $homeBtn = document.querySelector('.home');
+const $favBtn = document.querySelector('.favorite-btn');
 
 $navBar.addEventListener('click', function (event) {
   if (
     event.target.tagName === 'I' &&
-    event.target.className === 'fa-solid fa-bars'
+    event.target.className === 'position fa-solid fa-bars'
   ) {
     $allCategoryBtn.classList.remove('hidden');
+    $favBtn.classList.remove('hidden');
     $savedBtn.classList.remove('hidden');
     $xBtn.classList.remove('hidden');
     $barsBtn.classList.add('hidden');
   } else if (
     event.target.tagName === 'I' &&
-    event.target.className === 'fa-solid fa-x'
+    event.target.className === 'position fa-solid fa-x'
   ) {
     $allCategoryBtn.classList.add('hidden');
+    $favBtn.classList.add('hidden');
     $savedBtn.classList.add('hidden');
     $xBtn.classList.add('hidden');
     $barsBtn.classList.remove('hidden');
