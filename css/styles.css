@@ -21,10 +21,6 @@
   align-content: center;
 }
 
-.column-third {
-  flex-basis: 25%;
-}
-
 .padding-7 {
   padding: 7px;
 }

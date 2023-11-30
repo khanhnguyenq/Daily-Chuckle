@@ -27,7 +27,10 @@
               <p class="margin-btm white-text font-medium">your requested</p>
             </div>
             <div class="saved-header inline hidden">
-              <p class="margin-btm white-text font-medium">your saved</p>
+              <p class="margin-btm white-text font-medium">your generated</p>
+            </div>
+            <div class="favorited-header inline hidden">
+              <p class="margin-btm white-text font-medium">your favorited</p>
             </div>
             <div class="flex inline">
               <p
@@ -56,17 +59,17 @@
           <i class="position fa-solid fa-bars"></i>
           <i class="position fa-solid fa-x hidden"></i>
           <div class="flex space-between center-cross row-to-column">
-            <div class="column-third">
+            <div class="column-one-quarter">
               <button class="all-category underlined hidden">
                 all&nbsp;categories
               </button>
             </div>
-            <div class="column-third">
+            <div class="column-one-quarter">
               <button class="favorite-btn underlined hidden">
                 favorited&nbsp;jokes
               </button>
             </div>
-            <div class="column-third">
+            <div class="column-one-quarter">
               <button class="saved-btn underlined hidden">
                 generated&nbsp;jokes
               </button>
@@ -125,11 +128,19 @@
           </div>
         </div>
         <div data-view="saved" class="saved hidden">
-          <div class="joke-area flex center-all">
+          <div class="flex center-all">
             <p>saved jokes</p>
           </div>
           <div>
-            <ul></ul>
+            <ul class="saved-ul"></ul>
+          </div>
+        </div>
+        <div data-view="favorited" class="favorited hidden">
+          <div class="flex center-all">
+            <p>favorited jokes</p>
+          </div>
+          <div>
+            <ul class="favorited-ul"></ul>
           </div>
         </div>
       </div>

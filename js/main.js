@@ -81,6 +81,9 @@ const $jokePage = document.querySelector('.joke');
 const $savedHeader = document.querySelector('.saved-header');
 const $savedPage = document.querySelector('.saved');
 
+const $favoritedHeader = document.querySelector('.favorited-header');
+const $favoritedPage = document.querySelector('.favorited');
+
 const $landingHeader = document.querySelector('.landing-header');
 const $landingNav = document.querySelector('.landing-navbar');
 const $landingPage = document.querySelector('.landing');
@@ -98,6 +101,9 @@ function viewSwap(view) {
     $jokeNav.classList.add('hidden');
     $jokePage.classList.add('hidden');
 
+    $favoritedHeader.classList.add('hidden');
+    $favoritedPage.classList.add('hidden');
+
     data.view = 'landing';
   } else if (view === 'joke') {
     $landingHeader.classList.add('hidden');
@@ -110,6 +116,9 @@ function viewSwap(view) {
     $jokeHeader.classList.remove('hidden');
     $jokeNav.classList.remove('hidden');
     $jokePage.classList.remove('hidden');
+
+    $favoritedHeader.classList.add('hidden');
+    $favoritedPage.classList.add('hidden');
 
     data.view = 'joke';
   } else if (view === 'saved') {
@@ -124,14 +133,34 @@ function viewSwap(view) {
     $jokeHeader.classList.add('hidden');
     $jokePage.classList.add('hidden');
 
+    $favoritedHeader.classList.add('hidden');
+    $favoritedPage.classList.add('hidden');
+
     data.view = 'saved';
+  } else if ((view = 'favorited')) {
+    $landingHeader.classList.add('hidden');
+    $landingNav.classList.add('hidden');
+    $landingPage.classList.add('hidden');
+
+    $savedHeader.classList.add('hidden');
+    $jokeNav.classList.add('hidden');
+    $savedPage.classList.add('hidden');
+
+    $jokeHeader.classList.add('hidden');
+    $jokePage.classList.add('hidden');
+
+    $favoritedHeader.classList.remove('hidden');
+    $jokeNav.classList.remove('hidden');
+    $favoritedPage.classList.remove('hidden');
+
+    data.view = 'favorited';
   }
 }
 
 const $jokeArea = document.querySelector('.joke-container');
 const $jokeView = document.querySelector('[data-view="joke"]');
 const $savedView = document.querySelector('[data-view="saved"]');
-const $savedJokeArea = document.querySelector('ul');
+const $savedJokeArea = document.querySelector('.saved-ul');
 
 function renderOneJoke(joke) {
   const $jokeP = document.createElement('p');
