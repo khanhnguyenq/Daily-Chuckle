@@ -276,7 +276,7 @@ $anotherBtn.addEventListener('click', function () {
 
 let clickedId = '';
 
-$savedJokeArea.addEventListener('click', function (event) {
+document.addEventListener('click', function (event) {
   const clickedItem = event.target;
   if (
     clickedItem.tagName === 'I' &&
@@ -300,6 +300,5 @@ $savedJokeArea.addEventListener('click', function (event) {
         data.favorited.splice(i, 1);
       }
     }
-    console.log('clickId:', clickedId);
   }
 });
