@@ -231,7 +231,9 @@ $savedBtn.addEventListener('click', function () {
 
 $homeBtn.addEventListener('click', function () {
   const $jokeP = document.querySelector('.joke-p');
-  $jokeP.remove();
+  if (data.view === 'joke') {
+    $jokeP.remove();
+  }
   viewSwap('landing');
 });
 
