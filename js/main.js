@@ -8,6 +8,14 @@ const $xBtn = document.querySelector('.fa-x');
 const $homeBtn = document.querySelector('.home');
 const $favBtn = document.querySelector('.favorite-btn');
 
+$savedBtn.addEventListener('click', function () {
+  viewSwap('saved');
+});
+
+$favBtn.addEventListener('click', function () {
+  viewSwap('favorited');
+});
+
 $navBar.addEventListener('click', function (event) {
   if (
     event.target.tagName === 'I' &&
@@ -161,6 +169,7 @@ const $jokeArea = document.querySelector('.joke-container');
 const $jokeView = document.querySelector('[data-view="joke"]');
 const $savedView = document.querySelector('[data-view="saved"]');
 const $savedJokeArea = document.querySelector('.saved-ul');
+const $favoritedJokeArea = document.querySelector('.favorited-ul');
 
 function renderOneJoke(joke) {
   const $jokeDiv = document.createElement('div');
@@ -171,6 +180,7 @@ function renderOneJoke(joke) {
     'class',
     'margin-bottom-30 joke-p flex center-all text-center flex-column',
   );
+  $jokeDiv.setAttribute('data-entry', `${joke.entryId}`);
 
   $jokeP.setAttribute('class', 'font-small');
   $jokeP.textContent = joke.value;
@@ -183,9 +193,34 @@ function renderOneJoke(joke) {
   return $jokeDiv;
 }
 
+function renderFavJoke(joke) {
+  const $jokeDiv = document.createElement('div');
+  const $jokeP = document.createElement('p');
+  const $heart = document.createElement('i');
+
+  $jokeDiv.setAttribute(
+    'class',
+    'margin-bottom-30 joke-p flex center-all text-center flex-column',
+  );
+  $jokeDiv.setAttribute('data-entry', `${joke.entryId}`);
+
+  $jokeP.setAttribute('class', 'font-small');
+  $jokeP.textContent = joke.value;
+
+  $heart.setAttribute('class', 'fa-solid fa-heart');
+
+  $jokeDiv.appendChild($jokeP);
+  $jokeDiv.appendChild($heart);
+
+  return $jokeDiv;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < data.joke.length; i++) {
     $savedJokeArea.appendChild(renderOneJoke(data.joke[i]));
+  }
+  for (let i = 0; i < data.favorited.length; i++) {
+    $favoritedJokeArea.appendChild(renderFavJoke(data.favorited[i]));
   }
   viewSwap(data.view);
 });
@@ -239,8 +274,32 @@ $anotherBtn.addEventListener('click', function () {
   }
 });
 
-// const $displayedJoke = document.querySelector('.font-small')
+let clickedId = '';
 
-// if (data.view = 'saved')
-
-// console.log('$displayedJoke:', $displayedJoke)
+$savedJokeArea.addEventListener('click', function (event) {
+  const clickedItem = event.target;
+  if (
+    clickedItem.tagName === 'I' &&
+    clickedItem.className === 'fa-regular fa-heart'
+  ) {
+    clickedId = parseInt(clickedItem.closest('div').getAttribute('data-entry'));
+    clickedItem.className = 'fa-solid fa-heart';
+    for (let i = 0; i < data.joke.length; i++) {
+      if (data.joke[i].entryId === clickedId) {
+        data.favorited.unshift(data.joke[i]);
+      }
+    }
+  } else if (
+    clickedItem.tagName === 'I' &&
+    clickedItem.className === 'fa-solid fa-heart'
+  ) {
+    clickedItem.className = 'fa-regular fa-heart';
+    clickedId = parseInt(clickedItem.closest('div').getAttribute('data-entry'));
+    for (let i = 0; i < data.favorited.length; i++) {
+      if (data.favorited[i].entryId === clickedId) {
+        data.favorited.splice(i, 1);
+      }
+    }
+    console.log('clickId:', clickedId);
+  }
+});
