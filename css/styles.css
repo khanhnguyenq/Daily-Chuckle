@@ -21,10 +21,6 @@
   align-content: center;
 }
 
-.column-third {
-  flex-basis: calc(40%);
-}
-
 .padding-7 {
   padding: 7px;
 }
@@ -42,15 +38,11 @@
 }
 
 .font-medium {
-  font-size: medium;
+  font-size: 1rem;
 }
 
 .font-x-large {
-  font-size: x-large;
-}
-
-.h-20 {
-  height: 20px;
+  font-size: 1.5rem;
 }
 
 .background-yellow {
@@ -60,7 +52,8 @@
 .all-category,
 .saved-btn,
 .home,
-.another {
+.another-btn,
+.favorite-btn {
   background-color: #f3f3dd;
   border: 0;
 }
@@ -74,7 +67,7 @@
   height: 70px;
   border: transparent;
   border-radius: 5px;
-  font-size: xx-small;
+  font-size: 0.6rem;
   transition: 0.25s ease;
 }
 
@@ -130,18 +123,12 @@ p {
 .btn-w-h:hover {
   width: 80px;
   height: 80px;
-  font-size: small;
+  font-size: 0.75rem;
 }
 
 .joke-container {
-  border: transparent;
-  border-radius: 10px;
-  height: 300px;
+  width: 80%;
   margin-top: 50px;
-}
-
-.font-x-small {
-  font-size: x-small;
 }
 
 .margin-top-30 {
@@ -152,4 +139,16 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.h-45 {
+  height: 45px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }

@@ -27,7 +27,10 @@
               <p class="margin-btm white-text font-medium">your requested</p>
             </div>
             <div class="saved-header inline hidden">
-              <p class="margin-btm white-text font-medium">your saved</p>
+              <p class="margin-btm white-text font-medium">your generated</p>
+            </div>
+            <div class="favorited-header inline hidden">
+              <p class="margin-btm white-text font-medium">your favorited</p>
             </div>
             <div class="flex inline">
               <p
@@ -52,21 +55,30 @@
     </header>
     <main>
       <div class="container">
-        <div class="landing-navbar">
-          <div class="flex h-20 space-between center-cross">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-x hidden"></i>
-            <div class="column-third">
-              <button class="all-category hidden">all&nbsp;categories</button>
+        <div class="landing-navbar h-45">
+          <i class="position fa-solid fa-bars"></i>
+          <i class="position fa-solid fa-x hidden"></i>
+          <div class="flex space-between center-cross row-to-column">
+            <div class="column-one-quarter">
+              <button class="all-category underlined hidden">
+                all&nbsp;categories
+              </button>
             </div>
-            <div class="column-third">
-              <button class="saved-btn hidden">saved&nbsp;jokes</button>
+            <div class="column-one-quarter">
+              <button class="favorite-btn underlined hidden">
+                favorited&nbsp;jokes
+              </button>
+            </div>
+            <div class="column-one-quarter">
+              <button class="saved-btn underlined hidden">
+                generated&nbsp;jokes
+              </button>
             </div>
           </div>
         </div>
         <div class="joke-navbar hidden">
           <div class="flex h-20 center-cross">
-            <i class="fa-solid fa-chevron-left font-small"></i>
+            <i class="fa-solid fa-chevron-left"></i>
             <button class="home margin-top-btm-0">home&nbsp;page</button>
           </div>
         </div>
@@ -109,18 +121,26 @@
             </div>
           </div>
         </div>
-        <div data-view="joke" class="joke hidden">
+        <div data-view="joke" class="joke hidden flex center-all">
           <div class="joke-container flex center-all"></div>
           <div class="another flex center-main margin-top-30">
-            <button class="another font-small">give me another!</button>
+            <button class="another-btn">give me another!</button>
           </div>
         </div>
         <div data-view="saved" class="saved hidden">
-          <div class="joke-area flex center-all">
+          <div class="flex center-all">
             <p>saved jokes</p>
           </div>
           <div>
-            <ul></ul>
+            <ul class="saved-ul"></ul>
+          </div>
+        </div>
+        <div data-view="favorited" class="favorited hidden">
+          <div class="flex center-all">
+            <p>favorited jokes</p>
+          </div>
+          <div>
+            <ul class="favorited-ul"></ul>
           </div>
         </div>
       </div>

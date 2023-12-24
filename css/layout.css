@@ -50,6 +50,16 @@ img {
   height: 60vh;
 }
 
+.row-to-column {
+  flex-direction: column;
+}
+
+.position {
+  display: inline;
+  position: absolute;
+  left: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 800px;
@@ -90,5 +100,15 @@ img {
 
   .h-category {
     height: 200px;
+  }
+
+  .row-to-column {
+    flex-direction: row;
+  }
+
+  .position {
+    display: inline;
+    position: absolute;
+    left: 350px;
   }
 }
